@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>דף אינטרנט עם כפתורים</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 50px;
         }
         button {
             margin: 10px;
@@ -26,13 +38,15 @@
 </head>
 <body>
 
-<h1>דף עם כפתורים שמשנים תוכן</h1>
+<div class="container">
+    <h1>דף עם כפתורים שמשנים תוכן</h1>
 
-<button onclick="changeColor()">שנה צבע רקע</button>
-<button onclick="changeText()">שנה טקסט</button>
-<button onclick="toggleVisibility()">הסתר/הצג טקסט</button>
+    <button onclick="changeColor()">שנה צבע רקע</button>
+    <button onclick="changeText()">שנה טקסט</button>
+    <button onclick="toggleVisibility()">הסתר/הצג טקסט</button>
 
-<div id="text">זהו הטקסט שישתנה בעת לחיצה על הכפתורים</div>
+    <div id="text">זהו הטקסט שישתנה בעת לחיצה על הכפתורים</div>
+</div>
 
 <script>
     function changeColor() {
